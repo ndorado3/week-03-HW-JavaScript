@@ -1,9 +1,10 @@
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+debugger;
 
 // Characters variables 
-// .split() converts a string into an array 
+
   var numbers = "0123456789";
   var specialChars = "!@#$%^&*()<>?./+=<>~`"; 
   var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -20,7 +21,6 @@ function generatePassword() {
   var chooseLowerCase;
   var chooseSpecialChars;
   var finalPassword = "";
-  
   
   //Asks the length of the password to the user
   enterLength = parseInt(prompt("How many characters would you like your password to contain? Please choose between 8 and 128"));
@@ -54,7 +54,7 @@ function generatePassword() {
 
     //If the user gives 4 negatives responses
     if (!chooseNumbers && !chooseSpecialChars && !chooseLowerCase && !chooseUpperCase) {
-      alert("You must choose a criteria!");
+      alert("You must choose at least 1 criteria!");
       return;  
     }
      
@@ -65,8 +65,6 @@ function generatePassword() {
   }
     return finalPassword;
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
